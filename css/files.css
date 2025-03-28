@@ -1,0 +1,11 @@
+body {
+    background-color: bisque;
+}
+.logo {
+    font-style: oblique;
+    font-size: xx-large;
+    color: black;
+}
+.navbar a{
+    color: aquamarine;
+}
