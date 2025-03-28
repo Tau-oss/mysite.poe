@@ -10,7 +10,8 @@
     height: 100vh;
 }
 body {
-    background-color: rgb(19, 19, 9);
+    background-image: url(images/mountains.jpg);
+    background-size: cover;
 }
 .navbar{
     width: 1200px;
