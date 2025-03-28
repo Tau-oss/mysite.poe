@@ -12,3 +12,9 @@
 body {
     background-color: beige;
 }
+.nav ul{
+    float: right;
+}
+.logo{
+    color: darkslategray;
+}
