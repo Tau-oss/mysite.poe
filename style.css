@@ -9,3 +9,6 @@
     background-size: cover;
     height: 100vh;
 }
+body {
+    background-color: beige;
+}
