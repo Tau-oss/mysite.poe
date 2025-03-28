@@ -1,6 +1,6 @@
 body{
-    background-color: aqua;
+    background-color: rgb(0, 2, 2);
 }
-nav ul{
+.nav ul{
     font-style: oblique; color: blue;
 }
