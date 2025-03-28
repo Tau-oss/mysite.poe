@@ -14,6 +14,7 @@ body {
 }
 .nav ul{
     float: right;
+    display: inline-block;
 }
 .logo{
     color: darkslategray;
