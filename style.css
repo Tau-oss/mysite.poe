@@ -12,10 +12,17 @@
 body {
     background-color: beige;
 }
-.nav ul{
-    float: right;
-    display: inline-block;
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+
+}
+.icon {
+    width: 200px;
+    float: left;
+    height: 70px;
 }
 .logo{
-    color: darkslategray;
+    color: aqua;
 }
