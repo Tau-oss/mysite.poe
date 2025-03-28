@@ -10,7 +10,7 @@
     height: 100vh;
 }
 body {
-    background-image: url(images/mountains.jpg);
+    background-image: url(images/cookie-756601_1280.jpg);
     background-size: cover;
 }
 .navbar{
@@ -58,4 +58,16 @@ ul li a{
 }
 ul li a:hover{
     color: #ff7200;
+}
+.track order{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    
 }
