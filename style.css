@@ -24,5 +24,15 @@ body {
     height: 70px;
 }
 .logo{
-    color: aqua;
+    color: rgb(3, 8, 8);
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+}
+.menu {
+    width: 400px;
+    float: left;
+    height: 70px;
 }
