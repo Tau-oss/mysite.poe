@@ -1,17 +1,4 @@
-footer {
-    background-color: #222;      
-    color: #fff;                 
-    padding: 20px 40px;          
-    text-align: center;          
-    font-family: Arial, sans-serif;
-  }
-  
-  footer a {
-    color: #1e90ff;             
-    text-decoration: none;
-    margin: 0 10px;              
-    transition: color 0.3s ease;
-  }
+
   
   footer a:hover {
     color: #ffffff;              
@@ -40,6 +27,11 @@ footer {
         width: 330px;
         float: left;
         margin-left: 270px;
+    }
+    log in your details{
+      width: 330px;
+      float: left;
+      margin-left: 270px;
     }
    ul{
     float: left;
