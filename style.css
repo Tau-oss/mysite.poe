@@ -28,13 +28,6 @@ footer {
     text-align: center; 
   }
 
-  .nav a {
-    display: inline-block;
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
 
   .nav a:hover {
     color: #007BFF;
@@ -50,15 +43,12 @@ footer {
         float: left;
         margin-left: 270px;
     }
-    ul{
-float: left;
-display: flex;
-justify-content: center;
-align-items: center;
-    }
-    ul li{
-        list-style: none;
-        margin-left: 62px;
-        margin-top: 27px;
-        font-size: 14px;
-    }
+   ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center
+
+   }
+
+
