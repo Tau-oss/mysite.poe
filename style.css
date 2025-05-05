@@ -18,4 +18,8 @@ footer {
     text-decoration: underline;
   }
   
+  footer .footer-links {
+    margin-bottom: 10px;
+  }
+  
   
