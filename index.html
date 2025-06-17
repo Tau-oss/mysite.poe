@@ -64,8 +64,42 @@
                               <button class="btn">Login</button>
                           </div>
                       </section>
+                      <h3>FAQs</h3>
 
+                      <button class="accordion">Do you offer custom orders?</button>
+                      <div class="panel">
+                        <p>Yes, we offer special custom orders discussed in person or via contact form.</p>
+                      </div>
+                      
+                      <button class="accordion">Where do you deliver?</button>
+                      <div class="panel">
+                        <p>We currently deliver within major cities in South Africa.</p>
+                      </div>
+                      
+                      <button class="accordion">Can I cancel my order?</button>
+                      <div class="panel">
+                        <p>You can cancel within the first 24 hours of placing your order.</p>
+                      </div>
+                      
         </div>
+        <script>
+            const accordions = document.querySelectorAll(".accordion");
+          
+            accordions.forEach((accordion) => {
+              accordion.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+          
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            });
+          </script>
+          
+
       
         
     </body>
