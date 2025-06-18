@@ -213,18 +213,18 @@ footer {
   text-align: left;
   font-size: 18px;
   transition: background-color 0.3s ease;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #140606;
 }
 
 .accordion:hover,
 .accordion.active {
-  background-color: #cadadb;
+  background-color: #0b2224;
 }
 
 /* Accordion Panel */
 .panel {
   padding: 0 20px;
-  background-color: #fff9f0;
+  background-color: #1f1506;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
