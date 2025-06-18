@@ -30,8 +30,52 @@
                             <p>You can cancel within the first 24 hours of placing your order.</p>
                         </div>
                     </section>
+                    <section id="map-section">
+                        <h3>Find Us</h3>
+                        <div id="map"></div>
+                    </section>
                     
-
+                    <script>
+                        function initMap() {
+                            const kgCookiesHQ = { lat: -26.2041, lng: 28.0473 }; // Example: Johannesburg
+                        
+                            const map = new google.maps.Map(document.getElementById("map"), {
+                                center: kgCookiesHQ,
+                                zoom: 12,
+                                styles: [ // Optional: Soft bakery-style theme
+                                    {
+                                        featureType: "all",
+                                        elementType: "geometry.fill",
+                                        stylers: [{ color: "#fff8f1" }]
+                                    },
+                                    {
+                                        featureType: "poi",
+                                        elementType: "labels",
+                                        stylers: [{ visibility: "off" }]
+                                    }
+                                ]
+                            });
+                        
+                            const marker = new google.maps.Marker({
+                                position: kgCookiesHQ,
+                                map: map,
+                                title: "KG COOKIES HQ"
+                            });
+                        
+                            const infoWindow = new google.maps.InfoWindow({
+                                content: "<strong>KG COOKIES HQ</strong><br>We deliver smiles from here!"
+                            });
+                        
+                            marker.addListener("click", () => {
+                                infoWindow.open(map, marker);
+                            });
+                        }
+                        </script>
+                        
+                        <!-- Load Google Maps API (replace YOUR_API_KEY) -->
+                        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+                            async defer></script>
+                        
 
     
 
