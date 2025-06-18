@@ -200,3 +200,38 @@ footer {
 }
 
 /* Button Styling */
+
+/* Accordion Button */
+.accordion {
+  background-color: #f4b183;
+  color: #333;
+  cursor: pointer;
+  padding: 15px 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion:hover,
+.accordion.active {
+  background-color: #e79960;
+}
+
+/* Accordion Panel */
+.panel {
+  padding: 0 20px;
+  background-color: #fff9f0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  font-size: 16px;
+}
+
+.panel p {
+  padding: 15px 0;
+  margin: 0;
+}
