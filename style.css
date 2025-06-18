@@ -280,7 +280,7 @@ footer {
 
 /* Navigation links */
 .nav-menu a {
-  color: #333;
+  color: #d47332;
   padding: 10px;
   transition: color 0.3s ease;
 }
@@ -307,5 +307,5 @@ footer {
 }
 .cookie-button img:hover {
   transform: rotate(5deg) scale(1.1);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 20px rgba(50, 232, 245, 0.15);
 }
