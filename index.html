@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body background="images/cookies - Copy.jpg">
+        <div id="welcome-message" class="welcome-message"></div>
+
+
         <div class="main>">
             <div class="navbar">
                 <div class="icon"></div>
@@ -97,7 +100,19 @@
                             });
                             </script>
                             
-                     
+                            <script>
+                                window.addEventListener("DOMContentLoaded", function () {
+                                    const welcome = document.getElementById("welcome-message");
+                                    welcome.textContent = "🍪 Welcome to KG COOKIES!";
+                                    welcome.classList.add("show");
+                                
+                                    // Hide after 5 seconds
+                                    setTimeout(() => {
+                                        welcome.classList.remove("show");
+                                    }, 5000);
+                                });
+                                </script>
+                                
 
       
         
