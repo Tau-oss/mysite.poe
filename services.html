@@ -28,7 +28,42 @@
         <p>We bake cakes</p>
         <p>We sell sweet treats such as puddings muffins</p>
         <p>We do offer services for weddings , birthday party and other social events</p>
-        
+        <script>
+            // Accordion functionality
+            document.addEventListener("DOMContentLoaded", function () {
+                const acc = document.querySelectorAll(".accordion");
+            
+                acc.forEach(button => {
+                    button.addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        const panel = this.nextElementSibling;
+                        if (panel.style.maxHeight) {
+                            panel.style.maxHeight = null;
+                        } else {
+                            panel.style.maxHeight = panel.scrollHeight + "px";
+                        }
+                    });
+                });
+            
+                // Scroll-based animations
+                const observers = document.querySelectorAll('.fade-in, .slide-left');
+            
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                            observer.unobserve(entry.target); // animate once
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
+            
+                observers.forEach(el => observer.observe(el));
+            });
+            </script>
+            
+
     </body>
     <footer>
       <div class="footer-content">
@@ -58,6 +93,18 @@
       <div class="footer-bottom">
           <p>&copy; 2025 KG COOKIES. All rights reserved.</p>
       </div>
-  </footer>
+  </footer><section class="faq-section fade-in">
+    <!-- Your accordion content -->
+</section>
+
+<div class="cookie-button slide-left">
+    <img src="images/cookie-icon.png" alt="Order Now">
+</div>
+
+<footer class="fade-in">
+    <!-- Footer content -->
+</footer>
+
+
   
 
