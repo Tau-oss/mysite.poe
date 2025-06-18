@@ -27,7 +27,23 @@
             </div>
         </header><h3>FAQs</h3>
 
-        
+        <input id="emailInput" class="srch" type="text" placeholder="Enter Email">
+        <span id="emailError" style="color:red; font-size:14px;"></span><script>
+            document.getElementById("emailInput").addEventListener("input", function () {
+                const email = this.value;
+                const error = document.getElementById("emailError");
+                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+                if (!regex.test(email)) {
+                    error.textContent = "❌ Invalid email format";
+                } else {
+                    error.textContent = "";
+                }
+            });
+            </script>
+            
+
+
     
         <!-- Contact Info -->
         <section class="contact-section">
