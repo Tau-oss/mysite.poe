@@ -200,3 +200,28 @@ footer {
 }
 
 /* Button Styling */
+.image-banner {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.image-banner img {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 15px;
+  animation: slideIn 2s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
