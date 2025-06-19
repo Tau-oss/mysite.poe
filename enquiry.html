@@ -124,73 +124,10 @@
           // e.target.reset();
         });
         </script>
-        if (!product || quantity < 1 || !name || !email) {
-            document.getElementById("response-message").innerHTML =
-              "<p>Please fill in all fields.</p>";
-            return;
-          }
-
-          document.getElementById("enquiry-form").addEventListener("submit", function (e) {
-            e.preventDefault();
+        
           
-            const prices = {
-              cookies: 25,
-              cakes: 40,
-              muffins: 20,
-              pudding: 35,
-            };
-          
-            const product = document.getElementById("product").value;
-            const quantity = parseInt(document.getElementById("quantity").value);
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-          
-            let errors = [];
-          
-            if (!product) {
-              errors.push("Please select a product.");
-            }
-          
-            if (!quantity || quantity < 1) {
-              errors.push("Please enter a valid quantity (minimum 1).");
-            }
-          
-            if (!name) {
-              errors.push("Please enter your name.");
-            }
-          
-            // Simple email format check (basic)
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email) {
-              errors.push("Please enter your email.");
-            } else if (!emailRegex.test(email)) {
-              errors.push("Please enter a valid email address.");
-            }
-          
-            const responseDiv = document.getElementById("response-message");
-          
-            if (errors.length > 0) {
-              // Show all error messages as a list
-              responseDiv.innerHTML = "<ul style='color: rgb(29, 85, 102);'>" + errors.map(e => `<li>${e}</li>`).join("") + "</ul>";
-              return;
-            }
-          
-            // If valid, calculate price and show success message
-            const pricePerItem = prices[product];
-            const totalPrice = pricePerItem * quantity;
-          
-            const message = `
-              <h3>Hi ${name},</h3>
-              <p>Thank you for your enquiry about <strong>${product}</strong>.</p>
-              <p>We have it in stock. The total price for ${quantity} item(s) is <strong>R${totalPrice}</strong>.</p>
-              <p>We'll contact you shortly at <strong>${email}</strong> to finalize your order.</p>
-            `;
-          
-            responseDiv.innerHTML = message;
-          
-            // Optionally clear the form
-            // e.target.reset();
-          });
+           
+            
           
               
             
