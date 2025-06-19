@@ -23,11 +23,30 @@
 
   
 
-        
+        <!-- 🔍 Search and Sort Controls -->
+<div style="margin: 20px;">
+    <input
+      type="text"
+      id="search-input"
+      placeholder="Search services..."
+      onkeyup="filterContent()"
+      style="padding: 10px; width: 60%;"
+    />
+    <button onclick="sortContent()" style="padding: 10px 15px; margin-left: 10px;">
+      Sort A–Z
+    </button>
+  </div>
+  
         </div>
-        <p>We bake cakes</p>
-        <p>We sell sweet treats such as puddings muffins</p>
-        <p>We do offer services for weddings , birthday party and other social events</p>
+        <div id="searchable-content">
+            <p class="search-item">We bake cakes</p>
+            <p class="search-item">We sell sweet treats such as puddings muffins</p>
+            <p class="search-item">We do offer services for weddings, birthday parties and other social events</p>
+          </div>
+          
+
+
+        
         <script>
             // Accordion functionality
             document.addEventListener("DOMContentLoaded", function () {
@@ -61,7 +80,33 @@
             
                 observers.forEach(el => observer.observe(el));
             });
-            </script>
+            </script><script>
+  // 🔍 Filter functionality
+  function filterContent() {
+    const input = document.getElementById("search-input");
+    const filter = input.value.toLowerCase();
+    const items = document.querySelectorAll("#searchable-content .search-item");
+
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(filter) ? "" : "none";
+    });
+  }
+
+  // 🔠 Sort functionality
+  function sortContent() {
+    const container = document.getElementById("searchable-content");
+    const items = Array.from(container.getElementsByClassName("search-item"));
+
+    items.sort((a, b) => {
+      return a.textContent.localeCompare(b.textContent);
+    });
+
+    items.forEach(item => container.appendChild(item));
+  }
+</script>
+
+
             
 
     </body>
