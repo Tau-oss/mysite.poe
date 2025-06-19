@@ -351,3 +351,45 @@ footer {
 .product:hover {
   transform: scale(1.03);
 }
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation menu */
+.nav-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  padding: 10px;
+  color: #333;
+}
+
+/* ✅ Responsive styles */
+@media screen and (max-width: 768px) {
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .srch, .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
