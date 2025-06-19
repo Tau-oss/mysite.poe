@@ -393,3 +393,21 @@ body {
     height: auto;
   }
 }
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  background: #fff3e6;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}

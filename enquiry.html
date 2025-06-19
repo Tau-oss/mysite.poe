@@ -57,7 +57,71 @@
        <p>delivery price is fixed at R70</p>
        <p>Special oders price deteremined in person</p>
        <p>refund allowed within first 48 hrs of purchase</p>
+
+       <h2>Product Enquiry Form</h2>
+       <form id="enquiry-form">
+         <label for="product">Select Product:</label>
+         <select id="product" name="product" required>
+           <option value="">--Choose--</option>
+           <option value="cookies">Cookies</option>
+           <option value="cakes">Cakes</option>
+           <option value="muffins">Muffins</option>
+           <option value="pudding">Pudding</option>
+         </select>
+       
+         <label for="quantity">Quantity:</label>
+         <input type="number" id="quantity" name="quantity" min="1" required>
+       
+         <label for="name">Your Name:</label>
+         <input type="text" id="name" name="name" required>
+       
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email" required>
+       
+         <button type="submit">Submit Enquiry</button>
+       </form>
+       
+       <div id="response-message" style="margin-top: 20px;"></div>
+       <script>
+        document.getElementById("enquiry-form").addEventListener("submit", function (e) {
+          e.preventDefault();
         
+          const prices = {
+            cookies: 25,
+            cakes: 40,
+            muffins: 20,
+            pudding: 35,
+          };
+        
+          const product = document.getElementById("product").value;
+          const quantity = parseInt(document.getElementById("quantity").value);
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+        
+          if (!product || quantity < 1 || !name || !email) {
+            document.getElementById("response-message").innerHTML =
+              "<p>Please fill in all fields.</p>";
+            return;
+          }
+        
+          const pricePerItem = prices[product];
+          const totalPrice = pricePerItem * quantity;
+        
+          const message = `
+            <h3>Hi ${name},</h3>
+            <p>Thank you for your enquiry about <strong>${product}</strong>.</p>
+            <p>We have it in stock. The total price for ${quantity} item(s) is <strong>R${totalPrice}</strong>.</p>
+            <p>We'll contact you shortly at <strong>${email}</strong> to finalize your order.</p>
+          `;
+        
+          document.getElementById("response-message").innerHTML = message;
+        
+          // Optionally clear the form
+          // e.target.reset();
+        });
+        </script>
+        
+       
     </body>
     <footer>
       <div class="footer-content">
