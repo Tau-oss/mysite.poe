@@ -1,0 +1,20 @@
+# robots.txt for kgcookies.com
+
+User-agent: *
+Disallow: /admin/
+Disallow: /cart/
+Disallow: /checkout/
+Allow: /
+
+Sitemap: https://yourdomain.com/sitemap.xml
+
+User-agent: *
+Disallow: /
+Allow: /index.html
+Allow: /aboutus.html
+Allow: /services.html
+Allow: /contactus.html
+Allow: /enquiry.html
+
+Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://www.yourdomain.com/sitemap.xml
