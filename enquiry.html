@@ -44,29 +44,7 @@
       </div>
   </header>
 
-  <form id="enquiry-form">
-    <label for="product">Select Product:</label>
-    <select id="product" required>
-      <option value="">--Choose--</option>
-      <option value="cookies">Cookies</option>
-      <option value="cakes">Cakes</option>
-      <option value="muffins">Muffins</option>
-      <option value="pudding">Pudding</option>
-    </select>
   
-    <label for="quantity">Quantity:</label>
-    <input type="number" id="quantity" min="1" required>
-  
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" required>
-  
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
-  
-    <button type="submit">Submit</button>
-  </form>
-  
-  <div id="form-message"></div>
   
   <h3>FAQs</h3>
 
@@ -144,62 +122,8 @@
           // e.target.reset();
         });
         </script>
-        <script>
-            document.getElementById("enquiry-form").addEventListener("submit", function (e) {
-              e.preventDefault(); // Prevent actual form submission
-            
-              // Get form values
-              const product = document.getElementById("product").value.trim();
-              const quantity = parseInt(document.getElementById("quantity").value);
-              const name = document.getElementById("name").value.trim();
-              const email = document.getElementById("email").value.trim();
-              const messageDiv = document.getElementById("form-message");
-            
-              // Reset messages
-              messageDiv.innerHTML = "";
-              messageDiv.style.color = "red";
-            
-              // Simple email validation
-              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
-              // Validation checks
-              if (!product) {
-                messageDiv.innerText = "Please select a product.";
-                return;
-              }
-              if (isNaN(quantity) || quantity < 1) {
-                messageDiv.innerText = "Please enter a valid quantity (1 or more).";
-                return;
-              }
-              if (name.length < 2) {
-                messageDiv.innerText = "Please enter your name.";
-                return;
-              }
-              if (!emailRegex.test(email)) {
-                messageDiv.innerText = "Please enter a valid email address.";
-                return;
-              }
-            
-              // If everything is valid
-              const prices = {
-                cookies: 25,
-                cakes: 40,
-                muffins: 20,
-                pudding: 35
-              };
-            
-              const price = prices[product];
-              const total = quantity * price;
-            
-              messageDiv.style.color = "green";
-              messageDiv.innerHTML = `
-                <h3>Thank you, ${name}!</h3>
-                <p>Your enquiry for <strong>${quantity} ${product}(s)</strong> has been received.</p>
-                <p>Total Price: <strong>R${total}</strong></p>
-                <p>We’ll follow up shortly at <strong>${email}</strong>.</p>
-              `;
-            });
-            </script>
+        
+              
             
        
     </body>
